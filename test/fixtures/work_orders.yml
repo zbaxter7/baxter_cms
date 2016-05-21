@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  wo_nbr: 1
+  description: MyText
+  employee: MyString
+  customer: MyString
+  hours: 9.99
+  start_date: 2016-05-21
+  end_date: 2016-05-21
+  notes: MyText
+
+two:
+  wo_nbr: 1
+  description: MyText
+  employee: MyString
+  customer: MyString
+  hours: 9.99
+  start_date: 2016-05-21
+  end_date: 2016-05-21
+  notes: MyText
