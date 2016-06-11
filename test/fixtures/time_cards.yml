@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2016-06-11
+  employee_id: 
+  morning_in: 2016-06-11 11:31:51
+  morning_out: 2016-06-11 11:31:51
+  afternoon_in: 2016-06-11 11:31:51
+  afternoon_out: 2016-06-11 11:31:51
+
+two:
+  date: 2016-06-11
+  employee_id: 
+  morning_in: 2016-06-11 11:31:51
+  morning_out: 2016-06-11 11:31:51
+  afternoon_in: 2016-06-11 11:31:51
+  afternoon_out: 2016-06-11 11:31:51
