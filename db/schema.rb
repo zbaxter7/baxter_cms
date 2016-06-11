@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160530221829) do
+ActiveRecord::Schema.define(version: 20160611154327) do
 
   create_table "employees", force: :cascade do |t|
     t.string   "first_name"
@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 20160530221829) do
   create_table "work_orders", force: :cascade do |t|
     t.integer  "wo_nbr"
     t.text     "description"
-    t.string   "employee"
     t.string   "customer"
     t.decimal  "hours"
     t.date     "start_date"
@@ -33,6 +32,9 @@ ActiveRecord::Schema.define(version: 20160530221829) do
     t.text     "notes"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "employee_id"
   end
+
+  add_index "work_orders", ["employee_id"], name: "index_work_orders_on_employee_id"
 
 end
