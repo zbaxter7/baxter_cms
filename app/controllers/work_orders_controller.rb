@@ -4,7 +4,7 @@ class WorkOrdersController < ApplicationController
   # GET /work_orders
   # GET /work_orders.json
   def index
-    @work_orders = WorkOrder.all
+    @work_orders = Work_Order.all
   end
 
   # GET /work_orders/1
@@ -14,7 +14,7 @@ class WorkOrdersController < ApplicationController
 
   # GET /work_orders/new
   def new
-    @work_order = WorkOrder.new
+    @work_order = Work_Order.new
   end
 
   # GET /work_orders/1/edit
@@ -24,7 +24,7 @@ class WorkOrdersController < ApplicationController
   # POST /work_orders
   # POST /work_orders.json
   def create
-    @work_order = WorkOrder.new(work_order_params)
+    @work_order = Work_Order.new(work_order_params)
 
     respond_to do |format|
       if @work_order.save
@@ -64,7 +64,7 @@ class WorkOrdersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_work_order
-      @work_order = WorkOrder.find(params[:id])
+      @work_order = Work_Order.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :work_orders
+  resources :time_cards
+
   root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
