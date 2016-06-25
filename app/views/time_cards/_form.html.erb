@@ -1,16 +1,40 @@
 <%= form_for(@time_card) do |f| %>
   <% if @time_card.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@time_card.errors.count, "error") %> prohibited this time_card from being saved:</h2>
+      <h2><%= pluralize(@time_card.errors.count, "error") %> prohibited this time card from being saved:</h2>
 
       <ul>
-      <% @time_card.errors.full_messages.each do |message| %>
+      <% @work_order.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :employee_id %><br>
+    <%= f.number_field :employee_id %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_field :date %>
+  </div>
+  <div class="field">
+    <%= f.label :morning_in %><br>
+    <%= f.time_select :morning_in %>
+  </div>
+  <div class="field">
+    <%= f.label :morning_out %><br>
+    <%= f.time_select :morning_out %>
+  </div>
+  <div class="field">
+    <%= f.label :afternoon_in %><br>
+    <%= f.time_select :afternoon_in %>
+  </div>
+  <div class="field">
+    <%= f.label :afternoon_out %><br>
+    <%= f.time_select :afternoon_out %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

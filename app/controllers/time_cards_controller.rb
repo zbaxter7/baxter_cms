@@ -69,6 +69,6 @@ class TimeCardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def time_card_params
-      params.fetch(:time_card, {})
+      params.require(:time_card).permit(:date, :employee_id, :morning_in, :morning_out, :afternoon_in, :afternoon_out)
     end
 end
