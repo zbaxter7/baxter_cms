@@ -17,7 +17,7 @@ class WorkOrdersControllerTest < ActionController::TestCase
   end
 
   test "should create work_order" do
-    assert_difference('WorkOrder.count') do
+    assert_difference('Work_Order.count') do
       post :create, work_order: { customer: @work_order.customer, description: @work_order.description, employee: @work_order.employee, end_date: @work_order.end_date, hours: @work_order.hours, notes: @work_order.notes, start_date: @work_order.start_date, wo_nbr: @work_order.wo_nbr }
     end
 
@@ -40,7 +40,7 @@ class WorkOrdersControllerTest < ActionController::TestCase
   end
 
   test "should destroy work_order" do
-    assert_difference('WorkOrder.count', -1) do
+    assert_difference('Work_Order.count', -1) do
       delete :destroy, id: @work_order
     end
 
